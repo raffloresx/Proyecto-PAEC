@@ -1,70 +1,217 @@
-
+```css
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #F7F3E8;
-    color: #443D32;
+    font-family: Arial, sans-serif;
+    background-color: #f8f5e9;
+    color: #35483a;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #B9D6B5;
+    background-color: #dcebd8;
     text-align: center;
-    padding: 30px;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin: 0;
+    color: #365b43;
 }
 
 nav {
-    background-color: #536B50;
+    background-color: #789b79;
     text-align: center;
     padding: 15px;
 }
 
 nav a {
+    display: inline-block;
     color: white;
     text-decoration: none;
-    margin: 15px;
     font-weight: bold;
+    margin: 5px 12px;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+nav a:hover {
+    background-color: #527558;
 }
 
 main {
-    text-align: center;
-    padding: 30px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto;
 }
 
-main img {
-    width: 300px;
+h2 {
+    color: #527558;
+    text-align: center;
+}
+
+h3 {
+    color: #527558;
+}
+
+p {
+    text-align: center;
+}
+
+.portada {
+    text-align: center;
+    padding: 20px;
+}
+
+.portada img {
+    width: 280px;
     max-width: 100%;
+    height: 220px;
+    object-fit: cover;
     border-radius: 15px;
+    margin: 15px auto;
 }
 
-footer {
-    background-color: #B9D6B5;
-    text-align: center;
-    padding: 15px;
+.informacion {
+    background-color: white;
+    padding: 22px;
+    margin: 25px 0;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px #d9dfd2;
 }
 
 .catalogo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    padding: 20px;
+    margin: 25px 0;
 }
 
 .perrito {
     background-color: white;
-    width: 250px;
+    text-align: center;
     padding: 15px;
     border-radius: 15px;
-    text-align: center;
+    box-shadow: 0 2px 8px #d9dfd2;
 }
 
 .perrito img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .perrito h3 {
-    color: #536B50;
+    margin-bottom: 5px;
+}
+
+.tarjeta-info {
+    background-color: #eef4e8;
+    padding: 18px;
+    margin: 12px 0;
+    border-radius: 12px;
+}
+
+.mensaje-huellitas {
+    background-color: #dcebd8;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.tabla-donaciones {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+}
+
+.tabla-donaciones th,
+.tabla-donaciones td {
+    border: 1px solid #c8d8c4;
+    padding: 12px;
+    text-align: center;
+}
+
+.tabla-donaciones th {
+    background-color: #dcebd8;
+}
+
+footer {
+    background-color: #789b79;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 35px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        margin: 4px;
+        padding: 7px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    .tabla-donaciones th,
+    .tabla-donaciones td {
+        padding: 6px;
+        font-size: 13px;
+    }
+}
+```
+
+/* Información de contacto */
+.informacion {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #f5f1e8;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.tarjetas-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tarjeta-info {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #c5d8b5;
+    flex: 1;
+    min-width: 180px;
+    max-width: 280px;
+}
+
+.tarjeta-info h3 {
+    color: #58764b;
+}
+
+.nota {
+    font-size: 12px;
+    color: #777777;
+}
+
+/* Mensaje de compromiso */
+.mensaje-huellitas {
+    text-align: center;
+    padding: 25px;
+    margin: 20px 0;
+    background-color: #e5efdc;
+    border-radius: 12px;
+}
+
+.mensaje-huellitas h2 {
+    color: #58764b;
 }
